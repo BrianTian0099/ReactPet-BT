@@ -1,0 +1,54 @@
+.checkOption {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+.checkOption p {
+  margin: 0;
+}
+
+.checkboxWrapper {
+  display: none;
+}
+
+.customCheckboxLabel {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.customCheckboxLabel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 3px;
+  background-color: #fff;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+}
+
+.customCheckboxLabel::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 2px;
+  transform: translateY(-50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.checkboxWrapper:checked + .customCheckboxLabel::after {
+  transform: translateY(-50%) scale(1);
+}

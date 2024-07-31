@@ -1,0 +1,42 @@
+.orderCard {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.orderCard img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.orderInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.orderType {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.orderType div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.orderDetails {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

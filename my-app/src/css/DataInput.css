@@ -1,0 +1,10 @@
+.dataInput {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dataInput .formGroup {
+  flex: 1;
+  min-width: 150px;
+}

@@ -1,0 +1,33 @@
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formGroup input:hover {
+  border: 2px solid #0065d0;
+}
+
+.formGroup button {
+  padding: 8px 16px;
+  border: 2px solid #000;
+  color: rgb(57, 57, 57);
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.formGroup button:hover {
+  background-color: #0056b3;
+  color: white;
+}
