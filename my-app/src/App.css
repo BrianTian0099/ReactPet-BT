@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainContent {
+  margin-left: 25%;
+  width: 75%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-sizing: border-box;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.topBar {
+  position: fixed;
+  /* background: linear-gradient(
+    45deg,
+    rgb(101, 178, 245) 0%,
+    rgba(26, 82, 136, 1) 77%,
+    rgb(30, 0, 255) 100%
+  ); */
+
+  background: linear-gradient(
+    45deg,
+    rgb(239, 239, 239) 0%,
+    rgb(185, 187, 190) 77%,
+    rgb(182, 182, 184) 100%
+  );
+  width: 72%;
+  top: 0;
+  left: 25%;
+  padding: 15px 18px;
+  margin: 15px;
+  box-sizing: border-box;
+  border-radius: 25px;
+  color: rgb(0, 0, 0);
+  z-index: 2;
+  background-size: 400% 400%;
+  animation: gradiend-Animation 10s ease infinite;
+  outline: 1px white solid;
+  outline-offset: -8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.content {
+  margin-top: 100px;
+  padding: 20px;
+  /* margin-top: 350px; */
+  flex: 1;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.flexContent {
+  margin-top: 3px;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 5px;
+}
+
+.section {
+  margin-top: 60px;
+}
+
+.productGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* margin-top: 200px; */
+}
+
+body {
+  /* background-color: rgb(98, 145, 245); */
+  font-family: "Noto Sans TC", sans-serif;
+
+  background-color: whitesmoke;
+}
+
+@keyframes gradiend-Animation {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

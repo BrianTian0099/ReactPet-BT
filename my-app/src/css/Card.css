@@ -11,6 +11,7 @@
   box-shadow: -5px -5px 80px rgb(230, 228, 228);
   cursor: pointer;
   transition: all 0.3s ease;
+  background-color: white;
 }
 
 .petCard .cardContent {
@@ -119,8 +120,8 @@
 
 .petPic {
   background-color: #000;
-  height: 250px;
-  width: 30%;
+  height: 450px;
+  width: 50%;
   margin: 15px 15px 15px 0px;
   border-radius: 15px;
 }

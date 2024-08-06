@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import DataInput from './DataInput';
-import FormGroup from './FormGroup';
+// import FormGroup from './FormGroup';
 import '../css/Card.css';
 
 const Card = ({ id }) => {
@@ -22,7 +22,7 @@ const Card = ({ id }) => {
           <div className="petPic"></div>
           <div className="dataGroup">
             <DataInput />
-            <FormGroup label="資料紀錄" type="select" id={`records${id}`} options={[{ value: 'vaccination', text: '疫苗接種' }, { value: 'bloodTest', text: '抽血紀錄' }, { value: 'all', text: '顯示全部' }]} />
+            {/* <FormGroup label="資料紀錄" type="select" id={`records${id}`} options={[{ value: 'vaccination', text: '疫苗接種' }, { value: 'bloodTest', text: '抽血紀錄' }, { value: 'all', text: '顯示全部' }]} /> */}
           </div>
         </div>
       </div>

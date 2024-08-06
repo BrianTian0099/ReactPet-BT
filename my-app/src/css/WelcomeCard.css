@@ -1,0 +1,48 @@
+/* ../css/WelcomeCard.css */
+.welCard {
+  background: linear-gradient(
+      to left,
+      rgb(0, 0, 0) 0%,
+      rgb(0, 0, 0) 2%,
+      rgba(206, 206, 206, 0) 45%
+    ),
+    url("../svg/pexels-lauren-whitaker-1014624-1975989.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 95%;
+  height: 450px;
+  /* height: auto; */
+  background-color: blueviolet;
+  padding: 20px;
+  color: white;
+  text-align: right;
+  border-radius: 25px;
+  box-shadow: 5px 5px 10px gray;
+}
+
+#cardLabel {
+  margin-top: 90px;
+  align-items: end;
+  justify-content: end;
+  margin-right: 50px;
+  /* margin: 25px; */
+}
+
+#welTop {
+  font-size: 80px;
+  margin: 15px;
+}
+
+#welDays {
+  margin-top: 80px;
+  font-size: 15px;
+}
+#welOrder {
+  font-size: 15px;
+}
+
+#welLevels {
+  font-weight: bolder;
+  font-size: 25px;
+  scrollbar-3dlight-color: blanchedalmond;
+}

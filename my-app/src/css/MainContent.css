@@ -4,28 +4,51 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  min-height: 100vh;
+  position: relative;
 }
 
 .topBar {
+  /* margin: 15px 15px; */
+  margin-top: 15px;
+  margin-bottom: 15px;
   position: fixed;
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
-    rgb(26, 26, 26) 0%,
-    rgba(26, 82, 136, 1) 77%,
+    rgb(76, 122, 163) 0%,
+    rgb(255, 255, 255) 77%,
     rgba(69, 186, 252, 1) 100%
-  );
-  width: 75%;
+  ); */
+  /* width: 65%; */
+  /* height: 100px; */
+  /* padding: 15px; */
   top: 0;
   left: 25%;
-  padding: 20px;
+  /* padding: 20px; */
   box-sizing: border-box;
   color: white;
   z-index: 2;
+  /* border-radius: 15px; */
+  box-shadow: 5px 5px 10px rgb(229, 229, 229);
+
+  right: 20px;
+  padding: 5px;
+  /* transition: cubic-bezier(0.19, 1, 0.22, 1); */
 }
 
-.content {
+/* .gradientBackground {
+} */
+
+/* .content {
   margin-top: 100px;
   padding: 20px;
+  flex: 1;
+} */
+
+.aNoneOb {
+  width: 100%;
+  height: 150px;
+  background-color: none;
 }
 
 .section {
@@ -45,4 +68,67 @@
 
 .section {
   margin-top: 60px;
+}
+
+.productGrid :active {
+  margin-top: 100px;
+}
+.productGrid {
+  /* margin-top: 100px; */
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  gap: 15px;
+  /* top: 120px; */
+  /* margin-top: 300px; */
+  /* overflow: hidden; */
+}
+
+/* #petCard1 #petCard2 #petCard3{
+  
+} */
+
+/* .petCardPic {
+  width: 120px;
+  height: 150px;
+} */
+
+.mainButtonGrid {
+  /* display: flex; */
+  /* flex-direction: row; */
+  display: grid;
+  gap: 15px;
+  /* gap: 10px; */
+  /* grid-template-rows: 45px 10px 80px; */
+  grid-template-columns: 3fr 7fr;
+}
+
+.styleBtn {
+  background-color: none;
+  border: solid black 2px;
+  border-radius: 50px;
+  font-weight: bolder;
+  /* color: black; */
+  margin: 25px 0px;
+}
+
+.Mainbtn1 {
+  background-color: white;
+  border: dotted;
+}
+.Mainbtn2 {
+  background-color: black;
+  color: white;
+}
+
+@keyframes gradiend-Animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

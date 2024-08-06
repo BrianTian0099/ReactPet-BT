@@ -2,29 +2,33 @@
   position: fixed;
   left: 0;
   top: 0;
-  bottom: 0; /* 使其高度为视窗的高度 */
-  width: 25%;
-  height: 100%;
+  bottom: 0;
+  width: 20%;
+  height: 99%;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: start;
   box-sizing: border-box;
-  box-shadow: 5px 0px 100px gray;
+  box-shadow: 5px 0px 15px rgb(209, 208, 208), -20px 80px 60px rgb(41, 41, 41),
+    -20px -50px 60px rgb(41, 41, 41);
+
   font-size: larger;
-  background: rgb(209, 209, 209);
-  background: linear-gradient(
+  margin-left: 5px;
+  margin-top: 5px;
+  /* background: rgb(209, 209, 209); */
+  /* background: linear-gradient(
     180deg,
     rgba(209, 209, 209, 1) 0%,
     rgba(255, 255, 255, 1) 14%,
     rgba(255, 255, 255, 1) 100%
-  );
+  ); */
   overflow: hidden;
+  border-radius: 20px;
 }
 
-.sideBar img {
-  /* border-radius: 50%; */
+.sideBar img:not(.humanImg) {
   width: 25px;
   height: 25px;
   z-index: 2;
@@ -39,31 +43,80 @@
   color: black;
   text-decoration: none;
   display: block;
+  /* align-items: center; */
+  justify-content: center;
+  align-items: center;
   text-align: left;
-  width: 100%;
+  width: 90%;
   z-index: 1;
   position: relative;
   margin-left: 5px;
+  /* margin-bottom: 15px; */
+  transition: all 0.2s cubic-bezier(0.1, 0.29, 0.14, 0.06);
 }
 
 .sideBar a:hover {
-  background-color: #6c6c6c;
+  background-color: #8dadf3;
   color: white;
   margin-left: 5px;
-  transform: scale(0.2s);
+  /* transform: scale(0.2s); */
+  border-radius: 15px;
+  padding: 10px;
+  transition: 0.8s;
+  /* transition: ease-in-out;
+  transition-timing-function: cubic-bezier(1, 0.89, 0.64, 0.36); */
+  /* transition: linear; */
+  /* transition: all 0.3s cubic-bezier(0.1, 0.29, 0.14, 0.06); */
+}
+
+#sideTextCenter a #icon:hover {
+  filter: invert(1);
 }
 
 .backToButtonClass {
-  margin-top: auto; /* 将按钮推到侧边栏底部 */
-  width: 100%; /* 确保按钮宽度为侧边栏宽度 */
+  margin-top: auto;
+  width: 100%;
 }
 
 #backToHome {
-  background-color: rgb(58, 58, 58);
-  color: #fff;
+  background-color: rgb(216, 213, 213);
+  color: #000000;
   height: 53px;
   width: 100%;
   justify-content: center;
   align-items: center;
   display: flex;
+  border: 0px;
+  transition: all 0.2s cubic-bezier(0.1, 0.29, 0.14, 0.06);
 }
+
+#backToHome:hover {
+  background-color: rgb(95, 162, 255);
+  transition: 0.8s;
+}
+
+.humanImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+/* 
+.NavImgCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* @media (max-width: 800px) {
+  .sideBar {
+    width: 10%;
+  }
+  .sideBar .navText {
+    visibility: hidden;
+  }
+  .sideBar a:hover {
+    padding: 1px;
+    width: 80%;
+    height: 45px;
+  }
+} */
