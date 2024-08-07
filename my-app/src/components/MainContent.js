@@ -95,9 +95,9 @@ const profileImages = [
           </div>
         </Section>
         <Section id="section4" active={activeSection === 'section4'}>
-          <OrderCard id="medicalOrder" type="醫療訂單" name="喵喵" service="看診" clinic="寵物醫院" doctor="張醫師" imgSrc="medical-order.jpg" />
-          <OrderCard id="groomingOrder" type="美容訂單" name="汪汪" service="洗澡" clinic="寵物美容院" doctor="李美容師" imgSrc="grooming-order.jpg" />
-          <OrderCard id="shoppingOrder" type="商城訂單" product="高級貓糧" spec="美味雞" quantity="1" orderPrice="500"   imgSrc="shopping-order.jpg" />
+          <OrderCard id="medicalOrder" type="醫療訂單" name="喵喵" service="看診" clinic="寵物醫院" doctor="張醫師" imgSrc={`${process.env.PUBLIC_URL}/assets/hospital-regular.svg`} />
+          <OrderCard id="groomingOrder" type="美容訂單" name="汪汪" service="洗澡" clinic="寵物美容院" doctor="李美容師" imgSrc={`${process.env.PUBLIC_URL}/assets/scissors-solid.svg`} />
+          <OrderCard id="shoppingOrder" type="商城訂單" product="高級貓糧" spec="美味雞" quantity="1" orderPrice="500"   imgSrc={`${process.env.PUBLIC_URL}/assets/tag-solid.svg`} />
         {/* 商品名稱，規格，數量，金額 */}
         
         </Section>
