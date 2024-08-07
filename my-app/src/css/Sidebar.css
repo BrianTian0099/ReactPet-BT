@@ -99,7 +99,16 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  outline: 0.2px solid white;
+  outline-offset: -3px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+.humanImg:hover {
+  transition: 0.3s;
+  border: #6a99ff 3px solid;
+}
+
 /* 
 .NavImgCenter {
   display: flex;

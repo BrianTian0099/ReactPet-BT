@@ -1,16 +1,16 @@
 .formGroup {
-  margin-bottom: 15px;
+  margin-bottom: 1px;
 }
 
 .formGroup label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
   font-weight: bold;
 }
 
 .formGroup input {
   width: 100%;
-  padding: 8px;
+  padding: 7.5px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
