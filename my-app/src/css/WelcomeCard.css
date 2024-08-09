@@ -1,23 +1,30 @@
 /* ../css/WelcomeCard.css */
 .welCard {
   background: linear-gradient(
-      to left,
-      rgb(0, 0, 0) 0%,
-      rgb(0, 0, 0) 2%,
-      rgba(206, 206, 206, 0) 45%
-    ),
-    url("../svg/pexels-lauren-whitaker-1014624-1975989.jpg");
+    to left,
+    rgb(0, 0, 0) 0%,
+    rgb(0, 0, 0) 2%,
+    rgba(206, 206, 206, 0) 45%
+  );
   background-size: cover;
   background-position: center;
   width: 95%;
   height: 450px;
-  /* height: auto; */
-  background-color: blueviolet;
   padding: 20px;
   color: white;
   text-align: right;
   border-radius: 25px;
   box-shadow: 5px 5px 10px gray;
+  outline: 1px solid white;
+  outline-offset: -5px;
+  position: relative;
+  overflow: hidden; /* 確保子元素不會溢出 */
+}
+
+.textset {
+  right: 50px;
+  position: absolute;
+  z-index: 2; /* 確保文字在圖片之上 */
 }
 
 #cardLabel {
@@ -25,7 +32,6 @@
   align-items: end;
   justify-content: end;
   margin-right: 50px;
-  /* margin: 25px; */
 }
 
 #welTop {
@@ -37,6 +43,7 @@
   margin-top: 80px;
   font-size: 15px;
 }
+
 #welOrder {
   font-size: 15px;
 }
@@ -45,4 +52,35 @@
   font-weight: bolder;
   font-size: 25px;
   scrollbar-3dlight-color: blanchedalmond;
+}
+
+.slideShowERA {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%; /* 初始位置在容器的右邊 */
+  background-size: cover;
+  background-position: center;
+}
+
+.wel-fade-in {
+  display: block;
+  animation: fadeInSlideIn 8s forwards; /* 使用複合動畫 */
+}
+
+@keyframes fadeInSlideIn {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+  50% {
+    left: 0%;
+    opacity: 1;
+  }
+  100% {
+    left: 0%;
+    opacity: 1;
+  }
 }
