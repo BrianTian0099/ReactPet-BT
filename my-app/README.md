@@ -1,5 +1,5 @@
 <h1>寵物網站-會員中心設計</h1>
-<img URL="https://github.com/user-attachments/assets/114627b4-111e-4cd1-a8ef-15c9853d7912">
+<img src="https://github.com/user-attachments/assets/114627b4-111e-4cd1-a8ef-15c9853d7912">
 
 
 
