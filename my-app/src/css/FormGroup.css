@@ -19,6 +19,14 @@
   border: 2px solid #0065d0;
 }
 
+.formText {
+  width: 100%;
+  padding: 7.5px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
 .formGroup button {
   padding: 8px 16px;
   border: 2px solid #000;

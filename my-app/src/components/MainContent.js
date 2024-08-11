@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Section from './Section';
 import Card from './Card';
 import OrderCard from './OrderCard';
@@ -11,15 +11,21 @@ import WelcomeCard from './welcomeCard';
 import TiltComponent from './TiltComponent';
 import PasswordCard from './PasswordCard';
 
-/**
- * MainContent 组件 - 主內容
- * @param {Object} props - 組件屬性
- * @param {string} props.activeSection - 當前章節
- * @param {string} props.sectionTitle - 當前標題
- * @returns JSX.Element
- */
 const MainContent = ({ activeSection, sectionTitle }) => {
   const [showPasswordCard, setShowPasswordCard] = useState(false);
+  const [editMode, setEditMode] = useState(false);
+  const [name, setName] = useState('吳康人');
+  const [email, setEmail] = useState('woo552@gmail.com');
+  const [phone, setPhone] = useState('0932856589');
+
+  useEffect(() => {
+    const storedName = localStorage.getItem('name');
+    const storedEmail = localStorage.getItem('email');
+    const storedPhone = localStorage.getItem('phone');
+    if (storedName) setName(storedName);
+    if (storedEmail) setEmail(storedEmail);
+    if (storedPhone) setPhone(storedPhone);
+  }, []);
 
   const handlePasswordButtonClick = () => {
     setShowPasswordCard(true);
@@ -27,7 +33,18 @@ const MainContent = ({ activeSection, sectionTitle }) => {
 
   const handleClosePasswordCard = () => {
     setShowPasswordCard(false);
-  }
+  };
+
+  const handleEditButtonClick = () => {
+    setEditMode(true);
+  };
+
+  const handleSaveButtonClick = () => {
+    localStorage.setItem('name', name);
+    localStorage.setItem('email', email);
+    localStorage.setItem('phone', phone);
+    setEditMode(false);
+  };
 
   const products = [
     { image: "https://i.postimg.cc/zfSgdJnz/O-KAT.jpg", title: "《美喵人生 O'KAT》冷凍乾燥生肉糧 | 鮪魚+雞｜貓冷凍脫水乾糧", price: '$10' },
@@ -58,7 +75,7 @@ const MainContent = ({ activeSection, sectionTitle }) => {
   return (
     <div className="mainContent">
       <div className="topBar" id="topBar">
-        <h1>{sectionTitle}</h1> {/* 顯示標題 */}
+        <h1>{sectionTitle}</h1>
       </div>
       <div className="content">
         <Section id="section1" active={activeSection === 'section1'}>
@@ -69,9 +86,33 @@ const MainContent = ({ activeSection, sectionTitle }) => {
         <Section id="section2" active={activeSection === 'section2'}>
           <div className="card">
             <CardRight>
-              <FormGroup label="姓名" type="text" id="name" />
-              <FormGroup label="電子郵件" type="email" id="email" />
-              <FormGroup label="手機號碼" type="tel" id="phone" />
+              <FormGroup
+                label="姓名"
+                type="text"
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                readOnly={!editMode}
+                className={editMode ? '' : 'formText'}
+              />
+              <FormGroup
+                label="電子郵件"
+                type="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                readOnly={!editMode}
+                className={editMode ? '' : 'formText'}
+              />
+              <FormGroup
+                label="手機號碼"
+                type="tel"
+                id="phone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                readOnly={!editMode}
+                className={editMode ? '' : 'formText'}
+              />
               <div>
                 <p>個人檔案自定義背景圖片</p>
                 <div className='imageGrid'>
@@ -82,16 +123,20 @@ const MainContent = ({ activeSection, sectionTitle }) => {
               </div>
               <div className="mainButtonGrid">
                 <button className='styleBtn Mainbtn1' type="button" onClick={handlePasswordButtonClick}>更改密碼</button>
-                <button className='styleBtn Mainbtn2'>編輯</button>
+                {editMode ? (
+                  <button className='styleBtn Mainbtn2' type="button" onClick={handleSaveButtonClick}>保存</button>
+                ) : (
+                  <button className='styleBtn Mainbtn2' type="button" onClick={handleEditButtonClick}>編輯</button>
+                )}
               </div>
             </CardRight>
           </div>
         </Section>
         <Section id="section3" active={activeSection === 'section3'}>
           <div className="flexContent">
-            <Card id="petCard1" image={`${process.env.PUBLIC_URL}/assets/pexels-hnoody_cut.jpg`} name="Fluffy" />
-            <Card id="petCard2" />
-            <Card id="petCard3" />
+            <Card id="petCard1" cardId={1} image={`${process.env.PUBLIC_URL}/assets/pexels-hnoody_cut.jpg`} name="Fluffy" />
+            <Card id="petCard2" cardId={2} />
+            <Card id="petCard3" cardId={3} />
           </div>
         </Section>
         <Section id="section4" active={activeSection === 'section4'}>
