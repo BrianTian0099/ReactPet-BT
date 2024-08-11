@@ -15,7 +15,24 @@
   border-radius: 4px;
 }
 
-.formGroup input:hover {
+.formGroup input.readOnly {
+  border: none;
+  background-color: transparent;
+  padding: 7.5px;
+  cursor: default;
+}
+
+.formGroup input.readOnly:hover {
+  border: none;
+}
+
+.formGroup input.editable {
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 7.5px;
+}
+
+.formGroup input.editable:hover {
   border: 2px solid #0065d0;
 }
 

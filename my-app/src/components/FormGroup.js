@@ -10,7 +10,7 @@ const FormGroup = ({ label, type, id, value, onChange, readOnly, className }) =>
       value={value} 
       onChange={onChange} 
       readOnly={readOnly} 
-      className={className} 
+      className={`${className} ${readOnly ? 'readOnly' : 'editable'}`} 
     />
   </div>
 );
