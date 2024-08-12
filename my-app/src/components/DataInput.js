@@ -49,6 +49,7 @@ const DataInput = ({ cardId }) => {
       [id]: value
     }));
   };
+  
 
   return (
     <div className="dataInput">
