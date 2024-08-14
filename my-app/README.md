@@ -1,3 +1,14 @@
+# 📦 寵物服務網站會員中心React專案
+
+![]([https://yourimageurl.com/banner.png](https://github.com/BrianTian0099/ReactPet-BT/blob/c544149c23c76b47d79c3f009abd67d40ba77c3d/my-app/public/assets/%E5%89%8D%E7%AB%AF%E7%B0%A1%E5%A0%B11.jpg))
+
+
+## 🌟 介紹
+歡迎來到 **我的寵物服務網站會員中心React專案**！這個專案是一個SideProject的一部分，而我負責會員系統，使用React製作，感謝閱讀。
+，
+![截圖]([https://yourimageurl.com/screenshot.png](https://github.com/BrianTian0099/ReactPet-BT/blob/c544149c23c76b47d79c3f009abd67d40ba77c3d/my-app/public/assets/HOMEPAGE%E7%A4%BA.gif))
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
