@@ -5,7 +5,7 @@
 ## 🌟 介紹
 歡迎來到 **我的寵物服務網站會員中心React專案**！這個專案是一個SideProject的一部分，而我負責會員系統，使用React製作，感謝閱讀。
 
-![首頁展示](https://github.com/BrianTian0099/ReactPet-BT/blob/c544149c23c76b47d79c3f009abd67d40ba77c3d/my-app/public/assets/HOMEPAGE%E7%A4%BA.gif)
+![首頁展示](https://raw.githubusercontent.com/BrianTian0099/ReactPet-BT/c544149c23c76b47d79c3f009abd67d40ba77c3d/my-app/public/assets/HOMEPAGE%E7%A4%BA.gif)
 
 
 
