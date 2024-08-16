@@ -1,27 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import FormGroup from './FormGroup';
-import '../css/DataInput.css';
+import React, { useState, useEffect } from "react";
+import FormGroup from "./FormGroup";
+import "../css/DataInput.css";
 
 const initialData = {
-  name: 'Fluffy',
-  species: '柯基犬',
-  size: '小型犬',
-  birth: '2023.11.08',
-  weight: '7.2Kg',
-  length: '42.8Cm'
+  name: "大胖",
+  species: "柯基犬",
+  size: "小型犬",
+  birth: "2023.11.08",
+  weight: "7.2Kg",
+  length: "42.8Cm",
 };
 
 const emptyData = {
-  name: '無資料',
-  species: '無資料',
-  size: '無資料',
-  birth: '無資料',
-  weight: '無資料',
-  length: '無資料'
+  name: "無資料",
+  species: "無資料",
+  size: "無資料",
+  birth: "無資料",
+  weight: "無資料",
+  length: "無資料",
 };
 
 const DataInput = ({ cardId }) => {
-  const [formData, setFormData] = useState(cardId === 1 ? initialData : emptyData);
+  const [formData, setFormData] = useState(
+    cardId === 1 ? initialData : emptyData
+  );
   const [isEditing, setIsEditing] = useState(false);
 
   useEffect(() => {
@@ -44,12 +46,11 @@ const DataInput = ({ cardId }) => {
 
   const handleChange = (e) => {
     const { id, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [id]: value
+      [id]: value,
     }));
   };
-  
 
   return (
     <div className="dataInput">
@@ -60,7 +61,7 @@ const DataInput = ({ cardId }) => {
         value={formData.name}
         onChange={handleChange}
         readOnly={!isEditing}
-        className={!isEditing ? 'formText' : ''}
+        className={!isEditing ? "formText" : ""}
       />
       <FormGroup
         label="品種"
@@ -69,7 +70,7 @@ const DataInput = ({ cardId }) => {
         value={formData.species}
         onChange={handleChange}
         readOnly={!isEditing}
-        className={!isEditing ? 'formText' : ''}
+        className={!isEditing ? "formText" : ""}
       />
       <FormGroup
         label="大小"
@@ -78,7 +79,7 @@ const DataInput = ({ cardId }) => {
         value={formData.size}
         onChange={handleChange}
         readOnly={!isEditing}
-        className={!isEditing ? 'formText' : ''}
+        className={!isEditing ? "formText" : ""}
       />
       <FormGroup
         label="生日"
@@ -87,7 +88,7 @@ const DataInput = ({ cardId }) => {
         value={formData.birth}
         onChange={handleChange}
         readOnly={!isEditing}
-        className={!isEditing ? 'formText' : ''}
+        className={!isEditing ? "formText" : ""}
       />
       <FormGroup
         label="公斤"
@@ -96,7 +97,7 @@ const DataInput = ({ cardId }) => {
         value={formData.weight}
         onChange={handleChange}
         readOnly={!isEditing}
-        className={!isEditing ? 'formText' : ''}
+        className={!isEditing ? "formText" : ""}
       />
       <FormGroup
         label="身長"
@@ -105,13 +106,17 @@ const DataInput = ({ cardId }) => {
         value={formData.length}
         onChange={handleChange}
         readOnly={!isEditing}
-        className={!isEditing ? 'formText' : ''}
+        className={!isEditing ? "formText" : ""}
       />
-      <div className='dataInputBtn'>
+      <div className="dataInputBtn">
         {isEditing ? (
-          <button id='dataInputBtn1' onClick={handleSaveClick}>保存</button>
+          <button id="dataInputBtn1" onClick={handleSaveClick}>
+            保存
+          </button>
         ) : (
-          <button id='dataInputBtn2' onClick={handleEditClick}>編輯</button>
+          <button id="dataInputBtn2" onClick={handleEditClick}>
+            編輯
+          </button>
         )}
       </div>
     </div>

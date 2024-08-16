@@ -106,6 +106,14 @@
   flex-direction: column;
 }
 
+#petCard4 {
+  height: 354px;
+}
+
+#petCard4.petCard.expanded {
+  height: 581px;
+}
+
 .backButton {
   border: solid #000 2px;
   border-radius: 5px;
